@@ -1,4 +1,13 @@
-$('h1').fadeOut(6000);
+
+
+$('.pres').fadeOut(4500);
+$('.content').show(5000).css('display', 'flex');
+
+$('progress').each(function() {
+    var max = $(this).val();
+    $(this).val().animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
+	});
+
 if(navigator.geolocation) { 
     navigator.geolocation.getCurrentPosition(function(pos) {
      
@@ -15,12 +24,14 @@ if(navigator.geolocation) {
   }).done(function(data) {
     console.log(data);
   $('#info').append('Ahora mismo hay ' + data.currently.temperature + '° de temperatura, además de ' + data.currently.summary + '. ');
-  $('#info i').attr('class', 'wi-forecast-io-'+ data.currently.icon)
+  $('#info i').attr('class', 'wi-forecast-io-'+ data.currently.icon);
+  $('.del').hide()
     	}); 
        },
 
     function(){
   $('#info').append('Si recargas la página y permites la localización te puedo dar una información del clima importante');
+  $('.del').hide()
 });
 
 };
