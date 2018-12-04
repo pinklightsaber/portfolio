@@ -1,12 +1,6 @@
 
 
-$('.pres').fadeOut(4500);
-$('.content').show(5000).css('display', 'flex');
 
-$('progress').each(function() {
-    var max = $(this).val();
-    $(this).val().animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
-	});
 
 if(navigator.geolocation) { 
     navigator.geolocation.getCurrentPosition(function(pos) {
@@ -35,3 +29,18 @@ if(navigator.geolocation) {
 });
 
 };
+$('.pres').fadeOut(4500);
+$('.content').show(5000).css('display', 'flex');
+
+$('progress').each(function() {
+    var max = $(this).val();
+    $(this).val().animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
+  });
+
+  function copyT(element) {
+ var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
