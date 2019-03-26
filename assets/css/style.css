@@ -1,10 +1,15 @@
+/*Fuentes*/
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
 
-body {
-  color: #5c5c5c;
+
+
+a {
+  color: #DB6E82;
 }
-.bg:after
+
+.bg:after , .rw-wrapper:after
     {
       content: '';
       position: fixed;
@@ -13,18 +18,152 @@ body {
       width: 100%;
       height: 100%;
       background: url('../img/overlay.png');
-      z-index: -1;
+
     }
 
-a {
-	color: #DB6E82;
-}
+
 .nav-tabs {
     display:none;
+}
+
+.rw-wrapper{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  
+  font-family: 'Arimo', sans-serif;
+  
+  padding: 10px;
+  z-index: 1000;
+  border: 8px #DB6E82 dotted;
+  background: radial-gradient(ellipse at center, rgb(250, 236, 222) 0%, rgb(227, 172, 156) 100%);
+ 
+
+}
+.rw-sentence{
+  padding-top: 30vh;
+  text-transform: uppercase;
+  font-weight: 100;
+letter-spacing: 10px;
+
+  
+}
+.rw-sentence span{
+  color: #444;
+  font-size: 200%;
+  font-weight: normal;
+
+}
+.rw-words, .rw-words-1{
+  display: inline;
+  letter-spacing: -0.4px;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.07);
+text-shadow: 10px 0 106px rgba(255, 255, 255, 0.96), -10px 0 106px rgba(255, 255, 255, 0.96), 0 0 20px #ffffff, 0 0 5px  #d66b7f;  
+font-weight: 700;
+overflow-y: hidden;
+overflow-x: visible;
+
+}
+.rw-words-1 span{
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  color: #DB6E82;
+  -webkit-animation: rotateWord 10s linear infinite 0s;
+  -moz-animation: rotateWord 10s linear infinite 0s;
+  -o-animation: rotateWord 10s linear infinite 0s;
+  -ms-animation: rotateWord 10s linear infinite 0s;
+  animation: rotateWord 10s linear infinite 0s;
+}
+.rw-words-1 span:nth-child(2) { 
+    -webkit-animation-delay: 2s; 
+  -moz-animation-delay: 2s; 
+  -o-animation-delay: 2s; 
+  -ms-animation-delay: 2s; 
+  animation-delay: 2s; 
+  color: #DB6E82;
+}
+.rw-words-1 span:nth-child(3) { 
+    -webkit-animation-delay: 4s; 
+  -moz-animation-delay: 4s; 
+  -o-animation-delay: 4s; 
+  -ms-animation-delay: 4s; 
+  animation-delay: 4s; 
+  color: white; 
+}
+.rw-words-1 span:nth-child(4) { 
+    -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s; 
+  -o-animation-delay: 6s; 
+  -ms-animation-delay: 6s; 
+  animation-delay: 6s; 
+  color: #DB6E82;
+}
+.rw-words-1 span:nth-child(5) { 
+    -webkit-animation-delay: 8s; 
+  -moz-animation-delay: 8s; 
+  -o-animation-delay: 8s; 
+  -ms-animation-delay: 8s; 
+  animation-delay: 8s; 
+  color: #8d6b9d;
+}
+
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+  5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+  20% { opacity: 0; -webkit-transform: translateY(30px); }
+  80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -moz-transform: translateY(-30px); }
+  5% { opacity: 1; -moz-transform: translateY(0px);}
+    17% { opacity: 1; -moz-transform: translateY(0px); }
+  20% { opacity: 0; -moz-transform: translateY(30px); }
+  80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-o-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -o-transform: translateY(-30px); }
+  5% { opacity: 1; -o-transform: translateY(0px);}
+    17% { opacity: 1; -o-transform: translateY(0px); }
+  20% { opacity: 0; -o-transform: translateY(30px); }
+  80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -ms-transform: translateY(-30px); }
+  5% { opacity: 1; -ms-transform: translateY(0px);}
+    17% { opacity: 1; -ms-transform: translateY(0px); }
+  20% { opacity: 0; -ms-transform: translateY(30px); }
+  80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; transform: translateY(-30px); }
+  5% { opacity: 1; transform: translateY(0px);}
+    17% { opacity: 1; transform: translateY(0px); }
+  20% { opacity: 0; transform: translateY(30px); }
+  80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@media screen and (max-width: 768px){
+  .rw-sentence { font-size: 18px; }
+}
+@media screen and (max-width: 320px){
+  .rw-sentence { font-size: 9px; }
 }
 @media(max-width:767px){
     
 }
+
+
 .bg {
 		background-image: url('../img/bg.jpg');
 		border: 8px #faf7f2 dotted;
@@ -35,7 +174,6 @@ a {
 		opacity: 1;
 		position: fixed;
 		top: 0;
-  
     z-index: -2;
 }
 
@@ -52,12 +190,17 @@ a {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12),
                 0 1px 2px rgba(0,0,0,0.24);
     text-align: center; 
-    display: flex;  
+    display: none;  
 	overflow: auto;
 	position: relative;
  	animation: fadeItIn 5s linear both 1.1s;
   z-index: 1;
-
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: dashed 1px #DB6E82;
+}
+.content:hover {
+  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
 }
 
 
@@ -217,6 +360,9 @@ progress::-moz-progress-bar {
   background-color: #faecde;
   padding: 0;
   height: 20%;
+  text-transform: uppercase;
+   font-weight:400; 
+        padding:0 20px;
 	
 }
 
@@ -252,29 +398,17 @@ progress::-moz-progress-bar {
 
 @keyframes bounceItIn {
   0% {
-  	opacity: 1;
-    transform: translateY(0px);
-  }
-
-  100% {
   	opacity: 0;
-    transform: translateY(-5px);
-  }    
-}
-
-@keyframes fadeItIn {
-  0% {
-    opacity: 0;
-    margin-top: 50vh;
-    /*transform: skewX(20deg);*/
+    transform: translateY(50%);
   }
 
   100% {
-    opacity: 1;
-    margin-top: 6vh;
-    /*transform: skewX(0deg);*/
+  	opacity: 1;
+    transform: translateY(0);
   }    
 }
+
+
 
 .tab-content {
 	padding: 50px;
@@ -311,11 +445,12 @@ progress::-moz-progress-bar {
 }
 
 #info i {
+  text-shadow: 10px 0 106px rgba(255, 255, 255, 0.96), -10px 0 106px rgba(255, 255, 255, 0.96), 0 0 20px #ffffff, 0 0 5px  #d66b7f;  
+
   font-family: 'weathericons';
   font-size: 3rem;
   font-style: normal;
   padding: 10px;
-  background-image: url('../img/overlay.png') ;
   border-radius: 20%;
   color: white;
       -webkit-text-fill-color: transparent;

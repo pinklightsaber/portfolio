@@ -18,7 +18,7 @@ if(navigator.geolocation) {
   }).done(function(data) {
     console.log(data);
   $('#info').append('Ahora mismo hay ' + data.currently.temperature + '° de temperatura </p><p> además de ' + data.currently.summary + '. ');
-  $('#info i').attr('class', 'wi-forecast-io-'+ data.currently.icon);
+  $('#info i').attr('class', 'wi-forecast-io-'+ data.currently.icon );
   $('.del').hide()
     	}); 
        },
@@ -29,8 +29,11 @@ if(navigator.geolocation) {
 });
 
 };
-// $('.pres').fadeOut(4500);
-// $('.content').show(5000).css('display', 'flex');
+setTimeout(function () {
+                $('.rw-wrapper').fadeOut();
+            }, 7000);
+
+$('.content').fadeIn(8500).css('display', 'flex');
 
 $('progress').each(function() {
     var max = $(this).val();
