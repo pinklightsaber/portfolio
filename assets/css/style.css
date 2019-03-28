@@ -155,13 +155,17 @@ overflow-x: visible;
 }
 @media screen and (max-width: 768px){
   .rw-sentence { font-size: 18px; }
+  .nav-pills {
+    flex-wrap: nowrap;
+  }
 }
 @media screen and (max-width: 320px){
   .rw-sentence { font-size: 9px; }
+  .nav-pills {
+    flex-wrap: nowrap;
+  }
 }
-@media(max-width:767px){
-    
-}
+
 
 
 .bg {
@@ -371,7 +375,34 @@ progress::-moz-progress-bar {
   padding: 0;
 }
 
+.nav li a:after {
+    -webkit-transition: all .3s ease-out;
+transition: all .3s ease-out;
+letter-spacing: 2px;
+}
+.nav li:nth-child(1):hover a:after {
+  content: " HOME";
+
+
+}
+.nav li:nth-child(2):hover a:after {
+  content: " ABOUT";
+
+}
+.nav li:nth-child(3):hover a:after {
+  content: " SKILLS";
+}
+
+.nav li:nth-child(4):hover a:after {
+  content: " PORTFOLIO";
+}
+.nav li:nth-child(5):hover a:after {
+  content: " CONTACTO";
+}
+
+
 .nav-item:hover {
+
 	opacity: 0.75;
     cursor: pointer;
 }
