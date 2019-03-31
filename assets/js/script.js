@@ -33,7 +33,6 @@ setTimeout(function () {
                 $('.rw-wrapper').fadeOut();
             }, 7000);
 
-$('.content').fadeIn(8500).css('display', 'flex');
 
 $('progress').each(function() {
     var max = $(this).val();
