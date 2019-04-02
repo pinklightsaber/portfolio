@@ -30,7 +30,7 @@ if(navigator.geolocation) {
 
 };
 setTimeout(function () {
-                $('.rw-wrapper').fadeOut();
+                $('.bg0').fadeOut();
             }, 7000);
 
 
