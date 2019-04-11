@@ -1,7 +1,6 @@
 
 
 
-
 if(navigator.geolocation) { 
     navigator.geolocation.getCurrentPosition(function(pos) {
      
@@ -23,7 +22,7 @@ if(navigator.geolocation) {
     	}); 
        },
 
-    function(){
+function(){
   $('#info').append('Si recargas la página y permites la localización te puedo dar una información del clima importante');
   $('.del').hide()
 });
@@ -46,3 +45,7 @@ $('progress').each(function() {
   document.execCommand("copy");
   $temp.remove();
 }
+
+$(document).on('click','>ul>li', function(){
+  $('.bg').css('background-color', $(this).data('color'));
+});

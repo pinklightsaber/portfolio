@@ -6,6 +6,7 @@
 body {
     font-family: 'Arimo', sans-serif;
     color: #7d766f;
+
 }
 a {
   color: #DB6E82;
@@ -20,6 +21,7 @@ a {
     width: 100%;
     height: 100%;
     background: url('../img/overlay.png');
+    opacity: 0.5
 
   }
 
@@ -28,11 +30,10 @@ a {
   width: 100%;
   height: 100vh;
   position: relative;
-
   padding: 10px;
   z-index: 1000;
-  border: 8px #DB6E82 dotted;
-  background: radial-gradient(ellipse at center, rgb(250, 236, 222) 0%, rgb(227, 172, 156) 100%);
+  border: 1px #faf7f2 dotted;
+  background: radial-gradient(ellipse at center, #DCD1C8 0%, #A25B60 100%);
 
 }
 
@@ -68,7 +69,7 @@ a {
   position: absolute;
   opacity: 0;
   overflow: hidden;
-  color: #DB6E82;
+  color: #671646;
   -webkit-animation: rotateWord 10s linear infinite 0s;
   -moz-animation: rotateWord 10s linear infinite 0s;
   -o-animation: rotateWord 10s linear infinite 0s;
@@ -83,7 +84,7 @@ a {
   -o-animation-delay: 2s; 
   -ms-animation-delay: 2s; 
   animation-delay: 2s; 
-  color: #DB6E82;
+  color: #7A284B;
 }
 
 .words-1 span:nth-child(3) { 
@@ -112,10 +113,13 @@ a {
   animation-delay: 8s; 
   color: #8d6b9d;
 }
-
+/*SECTION2*/
 .bg {
-    background-image: url('../img/bg.jpg');
-    border: 8px #faf7f2 dotted;
+    background-color: #dcd1c8;
+    background-image: -webkit-linear-gradient(250deg, #dcd1c8 0%, #b5807b 100%);
+    background-image: -o-linear-gradient(250deg, #dcd1c8 0%, #b5807b 100%);
+    background-image: linear-gradient(340deg, #dcd1c8 0%, #b5807b 100%);
+    border: 1px #faf7f2 dotted;
     background-repeat: repeat;
     height: 100%;
     width: 100%;
@@ -127,10 +131,8 @@ a {
 }
 
 .tabs {
-  background-color: #faecde;
+
   padding: 0;
-
-
 }
 
 .profile {
@@ -152,7 +154,7 @@ a {
 
 .icons a {
   color:#fff;
-  background: #DB6E82;
+  background: #8e3f53;
   border-radius:50%;
   text-align:center;
   text-decoration:none;
@@ -218,6 +220,20 @@ a {
   text-align: justify;
 }
 
+.tab-pane h1 {
+  font-family: 'CoreCircus', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 
+      -1px -1px 0 #DB6E82,  1px 1px 0 #DB6E82, 
+      1px 0px 0px white, 0px 1px 0px white;
+  font-weight: bold;
+  color: white;
+}
+.tab-pane h1:hover {
+  color: #e3ac9c;
+}
+
 #skills span {
   top: -30px;
   left: 2%;
@@ -238,33 +254,37 @@ progress {
   width: 100%;
   display: block;
   opacity: 0.5;
-  height: 50px;
   text-align: center;
   line-height: 50px;
-  background-color: #faecde;
   height: 20%;
   text-transform: uppercase;
    font-weight:400; 
   
 }
+ 
 
 .nav-link {
-  color: #000 !important;
-  padding: 0;
+  color: #671646 !important;
+ 
 }
-
+ i {
+  font-size: 1.3rem;
+ }
 
 
 .nav-link.active {
   opacity: 1;
   animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-color: #fff !important;
-  color: #DB6E82 !important;
+  color: #8e3f53 !important;
+
 }
 
 .tab-content {
   padding: 50px;
   text-align: center;
+
+
 }
 
 button {
@@ -299,9 +319,10 @@ button {
      position: relative;
      overflow: auto;
      min-height: 95vh;
+
   }
   .nav-link.active {
-    border: dashed 2px #DB6E82;
+    border: dashed 2px #8e3f53;
   }
   .icons {
     padding: 10px;
@@ -343,24 +364,32 @@ button {
     position: relative;
     animation: fadeItIn 5s linear both 1.1s;
     z-index: 1;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    border: dashed 1px #DB6E82;
+    /*border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;*/
+    
+
   }
 
   .content:hover {
     box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
   }
-  .nav {
 
+  .nav{
+    height: 60vh;
+    position: fixed;
+    max-width: 19%;
+    background-color: #DCD1C8;
   }
+
   .nav li a:after {
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     letter-spacing: 2px;
+    font-size: 1.6vw;
+
   }
 
-  .nav li:nth-child(1):hover a:after {
+  .nav li:nth-child(1):hover a:after{
     content: " HOME";
   }
 
@@ -382,12 +411,16 @@ button {
   .nav-item:hover {
     opacity: 0.75;
     cursor: pointer;
+
+
   }
   .nav-link.active {
-    border-right: solid 4px #DB6E82;
+    border-right: solid 4px #8e3f53;
   }
   .nav-item {
-    padding:0 20px;
+
+    display: inline-block;
+    width: 100%;
   }
   .profile:hover {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12),
