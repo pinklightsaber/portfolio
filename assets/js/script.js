@@ -1,9 +1,19 @@
 
+ n =  new Date();
+  y = n.getFullYear();
+  m = n.getMonth();
+  d = n.getDate();
+ var fecha= new Date(y,m,d);
+ var month= fecha.toLocaleDateString('es-ES', {month: 'long'});
+ var day = fecha.toLocaleDateString('es-ES', {weekday: 'long'});
+ var date= fecha.toLocaleDateString('es-ES',  {day: 'numeric'});
+ document.getElementById('day').innerHTML = day;
+ document.getElementById('date').innerHTML=date;
+ document.getElementById('month').innerHTML=month;
 
 
-if(navigator.geolocation) { 
+ if(navigator.geolocation) { 
     navigator.geolocation.getCurrentPosition(function(pos) {
-     
       lat = pos.coords.latitude;
       lon = pos.coords.longitude;
 
@@ -23,6 +33,7 @@ if(navigator.geolocation) {
        },
 
 function(){
+ 
   $('#info').append('Si recargas la página y permites la localización te puedo dar una información del clima importante');
   $('.del').hide()
 });
@@ -46,6 +57,3 @@ $('progress').each(function() {
   $temp.remove();
 }
 
-$(document).on('click','>ul>li', function(){
-  $('.bg').css('background-color', $(this).data('color'));
-});

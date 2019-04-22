@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
 @import url('https://fonts.googleapis.com/css?family=Arimo');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One');
 
 body {
     font-family: 'Arimo', sans-serif;
     color: #7d766f;
 
 }
+h3 {
+  visibility: hidden;
+}
 a {
-  color: #DB6E82;
+  color: #99cbc6;
 }
 
 .bg:after , .bg0:after
@@ -33,12 +37,15 @@ a {
   padding: 10px;
   z-index: 1000;
   border: 1px #faf7f2 dotted;
-  background: radial-gradient(ellipse at center, #DCD1C8 0%, #A25B60 100%);
+  background-image: url(../img/bg0.jpg);
+  background-size: cover;
+  font-family: 'Bowlby One', cursive;
+
 
 }
 
 .sentence{
-  padding-top: 30vh;
+  padding: 5%;
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 10px;
@@ -69,57 +76,83 @@ a {
   position: absolute;
   opacity: 0;
   overflow: hidden;
-  color: #671646;
-  -webkit-animation: rotateWord 10s linear infinite 0s;
-  -moz-animation: rotateWord 10s linear infinite 0s;
-  -o-animation: rotateWord 10s linear infinite 0s;
-  -ms-animation: rotateWord 10s linear infinite 0s;
-  animation: rotateWord 10s linear infinite 0s;
+  color: #f3b9b9 ;
+  -webkit-animation: rotateWord 6s linear infinite 0s;
+  -moz-animation: rotateWord 6s linear infinite 0s;
+  -o-animation: rotateWord 6s linear infinite 0s;
+  -ms-animation: rotateWord 6s linear infinite 0s;
+  animation: rotateWord 6s linear infinite 0s;
   
 }
 
 .words-1 span:nth-child(2) { 
-  -webkit-animation-delay: 2s; 
-  -moz-animation-delay: 2s; 
-  -o-animation-delay: 2s; 
-  -ms-animation-delay: 2s; 
-  animation-delay: 2s; 
+  -webkit-animation-delay: 1.5s; 
+  -moz-animation-delay: 1.5s; 
+  -o-animation-delay: 1.5s; 
+  -ms-animation-delay: 1.5s; 
+  animation-delay: 1.5s; 
   color: #7A284B;
 }
 
 .words-1 span:nth-child(3) { 
-  -webkit-animation-delay: 4s; 
-  -moz-animation-delay: 4s; 
-  -o-animation-delay: 4s; 
-  -ms-animation-delay: 4s; 
-  animation-delay: 4s; 
-  color: white; 
+  -webkit-animation-delay: 3s; 
+  -moz-animation-delay: 3s; 
+  -o-animation-delay: 3s; 
+  -ms-animation-delay: 3s; 
+  animation-delay: 3s; 
+  color: #f3b9b9 ; 
 }
 
 .words-1 span:nth-child(4) { 
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s; 
-  -o-animation-delay: 6s; 
-  -ms-animation-delay: 6s; 
-  animation-delay: 6s; 
+  -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s; 
+  -o-animation-delay: 4.5s; 
+  -ms-animation-delay: 4.5s; 
+  animation-delay: 4.5s; 
   color: #DB6E82;
 }
 
 .words-1 span:nth-child(5) { 
-  -webkit-animation-delay: 8s; 
-  -moz-animation-delay: 8s; 
-  -o-animation-delay: 8s; 
-  -ms-animation-delay: 8s; 
-  animation-delay: 8s; 
+  -webkit-animation-delay: 6s; 
+  -moz-animation-delay: 6s; 
+  -o-animation-delay: 6s; 
+  -ms-animation-delay: 6s; 
+  animation-delay: 6s; 
   color: #8d6b9d;
 }
+
+.date {
+  position: absolute;
+  background-color: #c9e5e4;
+  right: 2%;
+  bottom: 2%;
+  color: #444;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.date p {
+  border: 2px #f3b9b9 solid;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#date {
+  font-size: 4rem;
+}
+
 /*SECTION2*/
 .bg {
-    background-color: #dcd1c8;
+   /* background-color: #dcd1c8;
     background-image: -webkit-linear-gradient(250deg, #dcd1c8 0%, #b5807b 100%);
     background-image: -o-linear-gradient(250deg, #dcd1c8 0%, #b5807b 100%);
     background-image: linear-gradient(340deg, #dcd1c8 0%, #b5807b 100%);
-    border: 1px #faf7f2 dotted;
+   */ 
+   background-image: url(../img/bg.jpg);
+   border: 1px #faf7f2 dotted;
+   background-size: cover;
     background-repeat: repeat;
     height: 100%;
     width: 100%;
@@ -174,7 +207,7 @@ a {
 }
 
 .icons a:hover {
-  background: #ef92a3;
+  background: #c9e5e4;
 }
 
 .icons a span {
@@ -253,7 +286,6 @@ progress {
 .nav-item {
   width: 100%;
   display: block;
-  opacity: 0.5;
   text-align: center;
   line-height: 50px;
   height: 20%;
@@ -264,7 +296,7 @@ progress {
  
 
 .nav-link {
-  color: #671646 !important;
+  color: #7a004d !important;
  
 }
  i {
@@ -275,8 +307,8 @@ progress {
 .nav-link.active {
   opacity: 1;
   animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  background-color: #fff !important;
-  color: #8e3f53 !important;
+  background-color: #ececec !important;
+  color: #99cbc6 !important;
 
 }
 
@@ -287,8 +319,12 @@ progress {
 
 }
 
+.tab-content:before {
+
+}
+
 button {
-    background: linear-gradient(to right,#DB6E82 10%,#fff 50%,#111 60%);
+    background: linear-gradient(to right,#DB6E82 10%,#fff 50%,#c9e5e4 60%);
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
@@ -296,7 +332,7 @@ button {
     animation: textclip 1.5s linear infinite;
     display: inline-block;
     border-radius: 10%;
-    padding:12px 31px;
+    padding:1% 2%;
     border: 1px white solid;
     text-shadow:0px 1px 32px #2f6627;
     font-weight:bold;
@@ -378,7 +414,7 @@ button {
     height: 60vh;
     position: fixed;
     max-width: 19%;
-    background-color: #DCD1C8;
+    background-color: #f9cccc;
   }
 
   .nav li a:after {
@@ -389,22 +425,28 @@ button {
 
   }
 
-  .nav li:nth-child(1):hover a:after{
+  .nav li:nth-child(1):hover a:after, 
+  .nav li:nth-child(1):focus-within {
     content: " HOME";
+    visibility: visible;
   }
 
-  .nav li:nth-child(2):hover a:after {
+  .nav li:nth-child(2):hover a:after, 
+  .nav li:nth-child(2):active h3:after {
     content: " ABOUT";
 
   }
-  .nav li:nth-child(3):hover a:after {
+  .nav li:nth-child(3):hover a:after,
+  .nav li:nth-child(3):active h3:after{
     content: " SKILLS";
   }
 
-  .nav li:nth-child(4):hover a:after {
+  .nav li:nth-child(4):hover a:after,
+  .nav li:nth-child(4):active h3:after {
     content: " PORTFOLIO";
   }
-  .nav li:nth-child(5):hover a:after {
+  .nav li:nth-child(5):hover a:after, 
+  .nav li:nth-child(5):active h3:after{
     content: " CONTACTO";
   }
 
@@ -415,7 +457,7 @@ button {
 
   }
   .nav-link.active {
-    border-right: solid 4px #8e3f53;
+    border-right: solid 4px #99cbc6;
   }
   .nav-item {
 
@@ -453,25 +495,22 @@ button {
 
 
 #info {
-    
+   
     color: #111;
-    right: 0;
     position: absolute;
     bottom: 0;
-    opacity: 0.8;
     font-family: 'Shadows Into Light', sans-serif;    
-    background: linear-gradient(to right,#DB6E82 10%,#fff 50%,#111 60%);
+    background: linear-gradient(to right,#DB6E82 10%,#fff 50%,#c9e5e4 60%);
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
-    color: #fff;
+    
     background-clip: text;
     text-fill-color: transparent;
     -webkit-background-clip: text;
 
     animation: textclip 1.5s linear infinite;
-    display: inline-block;
-}
+    }
 
 #info i {
   text-shadow: 10px 0 106px rgba(255, 255, 255, 0.96), -10px 0 106px rgba(255, 255, 255, 0.96), 0 0 20px #ffffff, 0 0 5px  #d66b7f;  
