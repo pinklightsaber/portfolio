@@ -1,4 +1,7 @@
-
+$('.m').on('change', function() {
+    $('.m').not(this).prop('checked', false);  
+});
+ 
  n =  new Date();
   y = n.getFullYear();
   m = n.getMonth();
@@ -26,22 +29,36 @@
     method: 'GET'
   }).done(function(data) {
     console.log(data);
-  $('#info').append('Ahora mismo hay ' + data.currently.temperature + '° de temperatura </p><p> además de ' + data.currently.summary + '. ');
-  $('#info i').attr('class', 'wi-forecast-io-'+ data.currently.icon );
-  $('.del').hide()
+    $('#iw i').attr('class', 'wi-forecast-io-'+ data.currently.icon );
+    $('#t').append( +data.currently.temperature +'°C');
+    $('.del').html( data.currently.summary)
+  // $('#info').append('Ahora mismo hay ' + data.currently.temperature + '° de temperatura </p><p> además de ' + data.currently.summary + '. ');
+  // $('#info i').attr('class', 'wi-forecast-io-'+ data.currently.icon );
+
     	}); 
        },
 
 function(){
- 
-  $('#info').append('Si recargas la página y permites la localización te puedo dar una información del clima importante');
-  $('.del').hide()
+
 });
 
 };
+$(document).on('click', '.btn0', function(){
+  $('.bg0').fadeOut();
+  $('.bg, .ia-container').fadeIn();
+});
+$(document).on('click','.btn2', function(){
+  $('.bg0').fadeIn();
+  $('.bg, .ia-container').fadeOut();
+})
+
 setTimeout(function () {
                 $('.bg0').fadeOut();
             }, 7000);
+setTimeout(function () {
+                $('.bg, .ia-container').fadeIn();
+            }, 7000);
+
 
 
 $('progress').each(function() {
