@@ -14,34 +14,6 @@ a {
 
 
 
-.bg0{
-  width: 100vw;
-height: 100vh;
-background-image: url(../img/bg0.png),linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
-background-image: url(../img/bg0.png),-o-linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
-background-image: url(../img/bg0.png),-webkit-linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
-background-size: contain;
-font-family: 'Bowlby One', cursive;
-background-position: center;
-position: fixed;
-
-
-}
-.book{
-   height: 70vh;
-width: 70vw;
-background-color: #dfdfdf;
-display: flex;
-margin: 10vh auto;
-border: 1px white solid;
-}
-
-.first {
-  width: 50%;
-
-margin: 5%;
-border: 1px white solid;
-}
 .sentence{
 padding: 5%;
 text-transform: uppercase;
@@ -630,6 +602,34 @@ height: 100%;
 }
 
 @media screen and (min-width: 769px){
+  .bg0{
+  width: 100vw;
+height: 100vh;
+background-image: url(../img/bg0.png),linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
+background-image: url(../img/bg0.png),-o-linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
+background-image: url(../img/bg0.png),-webkit-linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
+background-size: contain;
+font-family: 'Bowlby One', cursive;
+background-position: center;
+position: fixed;
+
+
+}
+  .book{
+height: 70vh;
+width: 70vw;
+background-color: #dfdfdf;
+display: flex;
+margin: 10vh auto;
+border: 1px white solid;
+}
+
+.first {
+  width: 50%;
+
+margin: 5%;
+border: 1px white solid;
+}
 
   .sentence span p {
     text-align: justify;
@@ -844,9 +844,5 @@ bottom: 0;
   }
 }
 
-/*df*/
-@media screen and (max-width: 720px) {
-
-}
 
 
