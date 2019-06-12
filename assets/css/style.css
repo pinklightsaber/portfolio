@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Neucha|Open+Sans&display=swap');
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #7d766f;
+    color: white;
 
 }
 
@@ -12,7 +12,9 @@ a {
   color: #99cbc6;
 }
 
-
+#correo {
+  display: none;
+}
 
 .sentence{
 padding: 5%;
@@ -98,6 +100,8 @@ font-family: 'Amatic SC', cursive;
 }
 .first p {
   font-family: 'Neucha', cursive;
+  color: gray;
+  margin: 1%
 }
 
 
@@ -166,7 +170,7 @@ height: 80%;
 background: #dfdfdf;
 position: relative;
 z-index: 2;
-bottom: 30%;
+bottom: 40%;
 left: 25%;
 -webkit-box-shadow: -29px -33px 33px -44px rgba(0,0,0,0.75);
 -moz-box-shadow: -29px -33px 33px -44px rgba(0,0,0,0.75);
@@ -281,13 +285,29 @@ background-image: url(../img/bg0.png),linear-gradient(110deg, #f1f1f1 40%, #d7d6
   opacity:1;
 }
 
+#port {
+  background-color: #fd91a5
+
+}
 #about {
   text-align: justify;
   font-family: 'Neucha', cursive;
+  background-color: #5accca
+  
 }
 
+#skills {
+  background-color: #fd91a5
+}
+#contacto {
+  background-color: #5accca
 
-#skills span {
+}
+#inicio {
+  background-color: #fd91a5
+}
+
+#skill span {
   top: -30px;
   left: 2%;
   position: relative;
@@ -344,8 +364,12 @@ button {
 .im {
   overflow: hidden;
   position: absolute;
+  border-radius: 1%
 }
 
+.im img {
+  opacity: .5;
+}
 
 .ia-container::-webkit-scrollbar { width: 0 !important }
 .ia-container img {
@@ -429,7 +453,7 @@ button {
 .ia-container input:checked + figcaption {
   
   transition: all 1s ease-in-out 0.9s;
-  background-color: #dfdfdf;
+
 }
 
 .ia-container input:checked ~ .pane {
@@ -483,23 +507,49 @@ border: 5px solid transparent;
 
 @media screen and (max-width: 768px){
   .bg0 {
-    position: static;
+    background-image: url(../img/pinkblue.jpg);
+    display: flex;
   }
 
+  .bg {
+    background-image: url(../img/pinkblue.jpg);
+    display: flex;
+
+  }
+  .girl {
+    position: absolute;
+    width: 120px;
+    top: 10%;
+    left: 70%
+  }
   .btn0, .btn2 {
   top: 0;
-  bottom: 95% !important
+  bottom: 95% !important;
+  width: 100%;
+
   }
   .date {
-    margin: 25%
+    margin: 10% 30%;
   }
   .book {
     height: auto;
     width: 100%;
-    display: block;
+text-align: center;
+align-items: center;
+margin-top: 5%
   }
   .first, .second {
-    width: 90%
+    width: 90%;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.07);
+
+margin: 5% auto;
+
+background: #abbaab;
+background: -webkit-linear-gradient(to right, #abbaab, #ffffff);
+background: linear-gradient(to right, #abbaab, #ffffff);
+  }
+  .circle {
+    background-color: transparent;
   }
 
   .sentence { font-size: 18px; }
@@ -532,9 +582,9 @@ border: 5px solid transparent;
     position: static;
   }
   .ia-container { 
-    width: 100vw;
+    width: 90vw;
     height: 140vh;
-    margin: 10vh 0;
+    margin: auto;
     overflow: auto;
     padding: 0;
   }
@@ -568,7 +618,7 @@ border: 5px solid transparent;
     width: 100vw;
   }
   .pane {
-    width: 100vw;
+    width: 90vw;
 
 height: 100%;
 
@@ -605,9 +655,9 @@ height: 100%;
   .bg0{
   width: 100vw;
 height: 100vh;
-background-image: url(../img/bg0.png),linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
-background-image: url(../img/bg0.png),-o-linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
-background-image: url(../img/bg0.png),-webkit-linear-gradient(110deg, #f1f1f1 40%, #d7d6d6 40%);
+background-image: url(../img/bg0.png),linear-gradient(to right, #c0c0aa, #1cefff);;
+background-image: url(../img/bg0.png),-o-linear-gradient(to right, #c0c0aa, #1cefff);;
+background-image: url(../img/bg0.png),-webkit-linear-gradient(to right, #c0c0aa, #1cefff);;
 background-size: contain;
 font-family: 'Bowlby One', cursive;
 background-position: center;
@@ -615,10 +665,18 @@ position: fixed;
 
 
 }
+.girl {
+  vertical-align: middle;
+border-style: none;
+position: absolute;
+width: 120px;
+bottom: 60%;
+left: 30%;
+}
   .book{
 height: 70vh;
 width: 70vw;
-background-color: #dfdfdf;
+background-color: #f1f1f1;
 display: flex;
 margin: 10vh auto;
 border: 1px white solid;
@@ -677,8 +735,7 @@ margin: 3%;
     margin: 1rem 0 1rem;
   }
   .ia-container .im {
-
-  border: .3rem #f1f1f1 solid;
+  
   height: 59vh;
     width: 30vw;
 box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3), 10px 0 0px rgba(0, 0, 0, 0.1) inset;  }
@@ -776,6 +833,8 @@ bottom: 0;
   padding: 1%;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
+background-color: #2ceaf7;
+background-image: linear-gradient(90deg, #2ceaf7 0%, #FA709A 100%);
 }
 
 /*animacion*/ 
