@@ -32,8 +32,6 @@ $('.m').on('change', function() {
     $('#iw i').attr('class', 'wi-forecast-io-'+ data.currently.icon );
     $('#t').append( +data.currently.temperature +'°C');
     $('.del').html( data.currently.summary)
-  // $('#info').append('Ahora mismo hay ' + data.currently.temperature + '° de temperatura </p><p> además de ' + data.currently.summary + '. ');
-  // $('#info i').attr('class', 'wi-forecast-io-'+ data.currently.icon );
 
     	}); 
        },
@@ -43,21 +41,21 @@ function(){
 });
 
 };
-$(document).on('click', '.btn0', function(){
-  $('.bg0').fadeOut();
-  $('.bg, .ia-container').fadeIn();
-});
-$(document).on('click','.btn2', function(){
-  $('.bg0').fadeIn();
-  $('.bg, .ia-container').fadeOut();
-})
+// $(document).on('click', '.btn0', function(){
+//   $('.bg0').fadeOut();
+//   $('.bg, .ia-container').fadeIn();
+// });
+// $(document).on('click','.btn2', function(){
+//   $('.bg0').fadeIn();
+//   $('.bg, .ia-container').fadeOut();
+// })
 
-setTimeout(function () {
-                $('.bg0').fadeOut();
-            }, 7000);
-setTimeout(function () {
-                $('.bg, .ia-container').fadeIn();
-            }, 7000);
+// setTimeout(function () {
+//                 $('.bg0').fadeOut();
+//             }, 7000);
+// setTimeout(function () {
+//                 $('.bg, .ia-container').fadeIn();
+//             }, 7000);
 
 
 
