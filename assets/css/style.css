@@ -102,11 +102,20 @@ input:checked + .label {
   font-family: 'Bowlby One', cursive;
   background-position: left bottom;
   position: absolute;
-  z-index: -1;
   margin-top:-45vh;
   background-repeat: no-repeat;
+   filter: gray;
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: all .6s ease;
+  -webkit-backface-visibility: hidden;
+
 }
 
+   .bg0:hover {
+      filter: none;
+      -webkit-filter: grayscale(0);
+
+    }
 
 .sentence {
   padding: 5%;
@@ -132,6 +141,9 @@ input:checked + .label {
   text-align: center;
 
 }
+
+
+
 
 
 .words, .words-1{
@@ -207,6 +219,15 @@ input:checked + .label {
   /*outline: 60vh outset rgba(255, 211, 242, 0.5);*/
 
 }
+.mail  {
+    position: relative !important;
+    cursor: auto !important;
+    opacity: 1 !important;
+    width: auto !important;
+    margin: 1% auto;
+    display: block;
+
+}
 a {
   color: #99cbc6;
 }
@@ -222,19 +243,19 @@ progress {
 
 
 button {
-    background: linear-gradient(to right,#DB6E82 10%,#fff 50%,#c9e5e4 60%);
-    background-size: auto auto;
+    background: linear-gradient(to right,#DB6E82 10%,#ff726b 50%,#c9e5e4 60%);
+    background-size: auto;
     background-clip: border-box;
-    background-size: 200% auto;
-    color: #DB6E82;
-    animation: textclip 1.5s linear infinite;
-    display: inline-block;
-    border-radius: 10%;
-    padding:1% 2%;
-    border: 1px white solid;
-    text-shadow:0px 1px 32px #2f6627;
-    font-weight:bold;
-
+background-clip: border-box;
+background-size: 200% auto;
+display: block;
+color: white;
+animation: textclip 1.5s linear infinite;
+border-radius: 10%;
+padding: 1vh 3vh;
+border: 1px white solid;
+margin: 2vh auto;
+cursor: pointer;
   }
 #correo {
   display: none;
@@ -459,6 +480,8 @@ transition: opacity 2s;
     z-index: 1000;
 }
 
+
+
 h1 {
 
   font-family: 'Montserrat', sans-serif;
@@ -520,7 +543,7 @@ padding: 2%;
 
 .second {
 background-color: #FFFFFF;
-background-image: linear-gradient(180deg, #FFFFFF 0%, #ffffff 18%, #ffffff 79%, #ff726b 87%);
+background-image: linear-gradient(180deg, #FFFFFF 0%, #ffffff 18%, #ffffff 79%, #ff726b 80%);
  
 }
 .third {
@@ -529,23 +552,16 @@ background-image: linear-gradient(0deg, #FFFFFF 0%, #ffffff 18%, #ffffff 51%, #f
 height: 100%;
 }
 
-.third p, .fourth p{
-  font-size: 1.3rem;
-  color:#ff726b ;
 
-
-}
 
 .fourth {
-  background: white;
+  background-image: linear-gradient(0deg, #fff 40% ,#ff726b 40% );
   height: 100%;
 
 }
 
 .card__svg {
-
-  left: 0;
-  top: 115px;
+margin-top: -10vh;
 }
 
 
@@ -554,11 +570,12 @@ height: 100%;
 
 }
 #t {
-  position: absolute;
+
   z-index: 1;
-  color: #ff726b;
+  background-color: #ff726b;
   margin: 0;
   font-size: 2rem;
+  color: #fff;
 }
 
 .del {
@@ -783,7 +800,7 @@ position: relative;
   .card__svg {
     display: none;
   }
-.first {
+.first, .second, .third, .fourth {
   top: 0;
   display: flex;
 
@@ -821,13 +838,14 @@ align-content: baseline;
 .book{
 
   height: 80vh;
+  margin-left: 30vw;
 
 }
 
 .book h1 {
   position: relative;
   top: -5vh;
-  left: 50%;
+  text-align: center;
   font-family: 'Roboto Mono', monospace;
 }
 

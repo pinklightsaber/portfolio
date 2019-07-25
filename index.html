@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>dreams ;</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>carol denisse torres obando</title>
+
+	<meta name="referrer" content="origin">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -96,9 +97,15 @@
 				<i class="fas fa-file-signature"></i><span for ="contacto" ><h1>CONTACTO</h1></span>
 			</figcaption>
 				<div  class="pane">
-		     	<p>Hurry? <a href="">+56 9 79778088</a></p>
-				 	<p>Write me about your project. </p> <button onclick="copyT('#correo')">Copia el correo</button>
-					<p id="correo">ctorres@idemar.cl</p>
+		     	<p>Hurry? </p>
+				 	<p>Write me about your project. </p> 
+				 	<form method="POST" action="https://formspree.io/ctorres@idemar.cl">
+				  	<input type="email" name="email" placeholder="Tu correo" class="mail">
+				  <textarea name="message" placeholder="Mensaje"></textarea>
+				  <button type="submit">Enviar</button>
+				</form>
+<!-- 				<button onclick="copyT('#correo')">Copia el correo</button>
+					<p id="correo">ctorres@idemar.cl</p> -->
 						<p>⋇⋆✦⋆⋇</p>
 				
 				</div>
@@ -156,33 +163,38 @@
 	</div>
 	<div class="second_open">
 		<div class="second">
-			<p id="iw"><i class="wi-day-sunny"></i></p>
-			<p id="t"></p>
-			<svg class="card__svg" viewBox="0 0 800 500">
+			<p id="iw">
+				<i class="wi-day-sunny"></i>
+			</p>
+				<svg class="card__svg" viewBox="0 0 800 500">
 				<path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#ff726b"></path>
 				<path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"></path>
 			</svg>
-			
-			
+			<p id="t"></p>
 			<p class="del">Permite la ubicación</p>
 
 		</div>
 	</div>
 	<div class="third_open">
 		<div class="third">
-			<svg class="card__svg" viewBox="0 0 800 500">
-				<path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="white"></path>
-				<path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"></path>
-				<p>Busca lugares</p>
-				<p><a href="https://pinklightsaber.github.io/buscador/">Servicios</a></p>
-			</svg>
+			<br>
+			<p>Busca lugares</p>
+			<br>
+
+			<button onclick="location.href='https://pinklightsaber.github.io/buscador/'">Ver</button>
+				
 		</div>
 	</div>
 	<div class="fourth_open">
 		<div class="fourth">
+			<br>
 			<p>Menú de almuerzo</p>
-			con Wordpress
-			<a href="http://35.199.100.43/">Here</a>
+			
+				<svg class="card__svg" viewBox="0 0 800 500">
+				<path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#fff"></path>
+				<path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent"></path>
+			</svg>
+		<button onclick="location.href='http://35.199.100.43/'">Ver</button>
 		</div>
 	</div>
 </div>
