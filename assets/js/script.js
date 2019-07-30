@@ -41,34 +41,53 @@ function(){
 });
 
 };
-// $(document).on('click', '.btn0', function(){
-//   $('.bg0').fadeOut();
-//   $('.bg, .ia-container').fadeIn();
-// });
-// $(document).on('click','.btn2', function(){
-//   $('.bg0').fadeIn();
-//   $('.bg, .ia-container').fadeOut();
-// })
-
-// setTimeout(function () {
-//                 $('.bg0').fadeOut();
-//             }, 7000);
-// setTimeout(function () {
-//                 $('.bg, .ia-container').fadeIn();
-//             }, 7000);
-
-
 
 $('progress').each(function() {
     var max = $(this).val();
     $(this).val().animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
   });
 
-  function copyT(element) {
- var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
+function createParticle (x, y) {
+  var size = Math.random() * 50 + 10;
+  
+  x -= (size / 2);
+  y -= (size / 2);
+  
+  var particle = document.createElement('div');
+  
+  particle.className = 'div';
+  document.body.appendChild(particle);
+  
+  TweenMax.set(particle, {
+    x: x, 
+    y: y,
+    width: size,
+    height: size,
+    background: function () {
+      return `hsl(${Math.random() *90+200}, 50%, 50%)`
+    }
+  });
+  TweenMax.to(particle, Math.random() * 2 + 1, {
+    x: x + (Math.random() - 0.5) * 200,
+    y: y + (Math.random() - 0.5) * 200,
+    opacity: 0,
+    scale:0,
+    ease: Power2.easeOut,
+    onComplete: function () {
+      document.body.removeChild(particle);
+    }
+  })
 }
+
+window.addEventListener('mousemove', function (e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  createParticle(x, y);
+});
+document.body.addEventListener('touchmove', function (e) {
+  var x = e.touches[0].clientX;
+  var y = e.touches[0].clientY;
+  e.preventDefault();
+  createParticle(x, y);
+});
 

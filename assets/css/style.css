@@ -8,8 +8,15 @@ body {
     color: white;
     height: 100vh;
     overflow: hidden;
+    touch-action:none;
     }
 
+.div {
+  position: absolute;
+  border-radius:50%;
+  left: 0;
+  top: 0;
+}
 .label {
   color: pink;
   z-index: 100;
@@ -96,26 +103,31 @@ input:checked + .label {
 .bg0 {
   width: 100vw;
   height: 110vh;
-  background-image: url(../img/bg.png),linear-gradient(to right, #fff, #e1dfde);;
-  background-image: url(../img/bg.png),-o-linear-gradient(to right, #fff, #e1dfde);;
-  background-image: url(../img/bg.png),-webkit-linear-gradient(to right, #fff, #e1dfde);;
+  background-image: url(../img/bg.png),linear-gradient(to right, #fff, #f4c6d3);;
+  background-image: url(../img/bg.png),-o-linear-gradient(to right, #fff, #f4c6d3);;
+  background-image: url(../img/bg.png),-webkit-linear-gradient(to right, #fff, #f4c6d3);;
   font-family: 'Bowlby One', cursive;
   background-position: left bottom;
   position: absolute;
   margin-top:-45vh;
   background-repeat: no-repeat;
-   filter: gray;
+ 
+
+}
+.bg0, .circle, .label {
+    filter: gray;
   -webkit-filter: grayscale(100%);
   -webkit-transition: all .6s ease;
   -webkit-backface-visibility: hidden;
-
 }
-
-   .bg0:hover {
+   .bg0:hover, .label:hover ~ .circle, .label:hover {
       filter: none;
       -webkit-filter: grayscale(0);
 
+
     }
+
+    .child-container{width:1730px;left:-710px;position:relative;}
 
 .sentence {
   padding: 5%;
@@ -652,11 +664,11 @@ position: relative;
 }
 #dos:checked ~ .circle {
 
-  transform: translateX(17vw);
+  transform: translateX(19vw);
 }
 #tres:checked ~ .circle {
 
-  transform: translateX(34vw);
+  transform: translateX(38vw);
 }
 /*#cuatro:checked ~ .circle {
 
