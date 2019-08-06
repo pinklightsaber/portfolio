@@ -1,3 +1,33 @@
+
+const slider = document.querySelector('.items');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
+
+
 $('.m').on('change', function() {
     $('.m').not(this).prop('checked', false);  
 });
@@ -34,60 +64,16 @@ $('.m').on('change', function() {
     $('.del').html( data.currently.summary)
 
     	}); 
-       },
+       
 
-function(){
+
 
 });
+     };
 
-};
+
 
 $('progress').each(function() {
     var max = $(this).val();
     $(this).val().animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
   });
-
-function createParticle (x, y) {
-  var size = Math.random() * 50 + 10;
-  
-  x -= (size / 2);
-  y -= (size / 2);
-  
-  var particle = document.createElement('div');
-  
-  particle.className = 'div';
-  document.body.appendChild(particle);
-  
-  TweenMax.set(particle, {
-    x: x, 
-    y: y,
-    width: size,
-    height: size,
-    background: function () {
-      return `hsl(${Math.random() *90+200}, 50%, 50%)`
-    }
-  });
-  TweenMax.to(particle, Math.random() * 2 + 1, {
-    x: x + (Math.random() - 0.5) * 200,
-    y: y + (Math.random() - 0.5) * 200,
-    opacity: 0,
-    scale:0,
-    ease: Power2.easeOut,
-    onComplete: function () {
-      document.body.removeChild(particle);
-    }
-  })
-}
-
-window.addEventListener('mousemove', function (e) {
-  var x = e.clientX;
-  var y = e.clientY;
-  createParticle(x, y);
-});
-document.body.addEventListener('touchmove', function (e) {
-  var x = e.touches[0].clientX;
-  var y = e.touches[0].clientY;
-  e.preventDefault();
-  createParticle(x, y);
-});
-
