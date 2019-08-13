@@ -9,29 +9,23 @@ body {
     height: 100vh;
     overflow: hidden;
     touch-action:none;
+    cursor: crosshair
     }
 
-.div {
-  position: absolute;
-  border-radius:50%;
-  left: 0;
-  top: 0;
-}
+
 .label {
   color: pink;
   z-index: 100;
   position: relative;
   cursor: pointer;
   left: 5vw;
-  top: 5vh;
-  margin-bottom: 5vh;
   font-size: 4vh;
 }
 
 
 .circle {
   position: absolute;
-  left: 4vw;
+  left: 4.4vw;
   top: 5vh;
   width: 9vh;
   height: 9vh;
@@ -39,6 +33,15 @@ body {
   transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97), background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
   transform: translate3d(1rem, 0, 0);
   z-index: 99
+}
+
+
+
+.circle h2, .circle h3, .circle h4 {
+  left: 11vh;
+color: gray;
+margin: 0 0 0 11vh;
+display:ruby-base;
 }
 
 input:checked + .label {
@@ -50,23 +53,22 @@ input:checked + .label {
   z-index: 100;
   display: flex;
   visibility: hidden;
+  margin:3.5vh;
 }
-
-
 
 #uno:checked ~ .circle {
   background-color: pink;
-  transform: translateY(1vh);
+  transform: translateY(3vh);
 }
 #dos:checked ~ .circle {
   background-color: #9acde7;
-  transform: translateY(14vh);
+  transform: translateY(16.5vh);
 }
 
 
 #tres:checked ~ .circle {
   background-color: #ff726b;
-  transform: translateY(27vh);
+  transform: translateY(32vh);
 }
 
 #cuatro:checked ~ .circle {
@@ -76,13 +78,13 @@ input:checked + .label {
 #uno:checked ~ .book,
 #uno:checked ~ .bg1, 
 #uno:checked ~ .book2 {
-  transform: translateY(0);
+  transform: translateY(-20vh);
   transition: transform 0.5s ease;
 }
 #dos:checked ~ .book,
 #dos:checked ~ .bg1, 
 #dos:checked ~ .book2 {
-  transform: translateY(-110vh);
+  transform: translateY(-120vh);
   transition: transform 0.5s ease;
 }
 
@@ -109,8 +111,8 @@ input:checked + .label {
   font-family: 'Bowlby One', cursive;
   background-position: left bottom;
   position: absolute;
-  margin-top:-45vh;
   background-repeat: no-repeat;
+  margin-top: -50vh;
  
 
 }
@@ -123,19 +125,15 @@ input:checked + .label {
  .label:hover ~ .circle, .label:hover, .bg0:hover{
       filter: none;
       -webkit-filter: grayscale(0);
+      
 
     }
 
-.div {
-  position: absolute;
-  border-radius:50%;
-  left: 0;
-  top: 0;
-}
+
     .child-container{width:1730px;left:-710px;position:relative;}
 
 .sentence {
-  padding: 5%;
+
   text-transform: uppercase;
   font-weight: 100;
   font-family: 'Coda', cursive;
@@ -153,7 +151,7 @@ input:checked + .label {
 
 .sentence span{
   color: #444;
-  font-size: 180%;
+  font-size: 220%;
   font-weight: normal;
   text-align: center;
 
@@ -171,6 +169,7 @@ input:checked + .label {
   position: relative;
   top: -2em;
    width: 55vw;
+   margin-top: -15vh;
 
 }
 .words-1 span{
@@ -260,14 +259,9 @@ progress {
 
 
 button {
-    background: linear-gradient(to right,#DB6E82 10%,#ff726b 50%,#c9e5e4 60%);
-    background-size: auto;
-    background-clip: border-box;
-background-clip: border-box;
-background-size: 200% auto;
+background:none;
 display: block;
 color: white;
-animation: textclip 1.5s linear infinite;
 border-radius: 10%;
 padding: 1vh 3vh;
 border: 1px white solid;
@@ -530,7 +524,7 @@ h1 {
     scrollbar-width:none;
     will-change: transform;
     user-select: none;
-    cursor: pointer;
+    cursor: e-resize;
   }
 
   .items.active {
@@ -554,6 +548,7 @@ h1 {
   perspective: 900px;
    margin: 3%;
    overflow: hidden;
+   opacity: .8;
 }
 ._open {
   position: absolute;
@@ -566,7 +561,10 @@ h1 {
 transform-style: preserve-3d;
 }
 
-
+._page:hover {
+  transform: scale(1.1);
+  opacity: 1
+}
 
  .back {
   -webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
@@ -608,25 +606,21 @@ margin: 5%}
   opacity: 1;
 }
 
+
 .back h3 {
   color: #fff;
-text-transform: uppercase;
-letter-spacing: 2px;
-font-size: 14px;
-margin: 0 15px;
-padding: 40px 0 0 0;
-height: 90px;
-font-family: 'Open Sans', Arial, sans-serif;
-text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 1%;
 }
 
 .back p {
- color: #fff;
-padding: 10px 5px;
-font-style: italic;
-margin: 0 30px;
-font-size: 12px;
-border-top: 1px solid rgba(255,255,255,0.5);
+   color: #fff;
+  font-style: italic;
+  margin: 5%;
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,0.5);
 }
 
 .first p {
@@ -732,6 +726,11 @@ position: relative;
 }
 
 @media screen and (max-width: 768px){
+   h4 {
+  display: none
+ }
+
+
 .circle {
   left: 7vw;
   width: 10vw;
@@ -908,26 +907,43 @@ position: relative;
 
 @media screen and (min-width: 769px){
 
-.label:nth-child(2):hover i:after{
-   content: " HOME";
-   letter-spacing: 1.5rem;
-  text-shadow: -10px 10px rgba(36, 166, 233, 0.2), 10px -10px rgba(219, 110, 130, 0.3);
+ .mainly {
+  font-size: 4rem;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  z-index: 11;
+ }
 
+ #uno:checked ~ .circle h2:after,
+#uno:checked ~ .mainly:after {
+  content: "home";
+  letter-spacing: 1.2em;
+  color: pink;
+ }
+ #uno:checked ~ .circle h3:after {
+  content: "desliza para revisar"
+ }
+  #dos:checked ~ .circle h2:after,
+   #dos:checked ~ .mainly:after {
+  content: "more";
+  letter-spacing: 1.2em;
+  color: #9acde7;
+ }
+ #dos:checked ~ .circle h3:after {
+  content: "información sobre mí"
+ }
+  #tres:checked ~ .circle h2:after,
+   #tres:checked ~ .mainly:after {
+  content: "port";
+  letter-spacing: 1.2em;
+  color: #ff726b;
+ }
+ #tres:checked ~ .circle h3:after {
+  content: "distintos trabajos";
+  
+ }
 
-}
-.label:nth-child(4):hover i:after{
-   content: " MORE";
-   letter-spacing: 1.5rem;
-  text-shadow: -10px 10px rgba(36, 166, 233, 0.2), 10px -10px rgba(219, 110, 130, 0.3);
-  color: #9acde7
-
-}
-.label:nth-child(6):hover i:after{
-   content: " PORT";
-   letter-spacing: 1.5rem;
-     text-shadow: -10px 10px rgba(36, 166, 233, 0.2), 10px -10px rgba(219, 110, 130, 0.3);
-  color: #ff726b
-}
 input:checked + .label {
   color: white;
 }
@@ -965,8 +981,9 @@ input:checked + .label {
   }
 
   progress::-webkit-progress-bar {
+
     animation: textclip 3s linear infinite;
-    background: url('../img/overlay.png');
+    background: url('../img/overlay.png') ;
   }
 
   progress::-webkit-progress-value {
@@ -976,7 +993,7 @@ input:checked + .label {
   progress::-moz-progress-bar {
 
       animation: textclip 3s linear infinite;
-      background: url('../img/overlay.png');
+      background: url('../img/overlay.png')pink;
   }
 
   .ia-container {
