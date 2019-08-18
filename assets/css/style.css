@@ -1,7 +1,8 @@
 /*Fuentes*/
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Neucha|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Coda:800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gravitas+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -9,7 +10,8 @@ body {
     height: 100vh;
     overflow: hidden;
     touch-action:none;
-    cursor: crosshair
+    cursor: crosshair;
+    margin:0;
     }
 
 
@@ -42,6 +44,7 @@ body {
 color: gray;
 margin: 0 0 0 11vh;
 display:ruby-base;
+
 }
 
 input:checked + .label {
@@ -61,7 +64,7 @@ input:checked + .label {
   transform: translateY(3vh);
 }
 #dos:checked ~ .circle {
-  background-color: #9acde7;
+  background-color: #688e8e;
   transform: translateY(16.5vh);
 }
 
@@ -79,20 +82,29 @@ input:checked + .label {
 #uno:checked ~ .bg1, 
 #uno:checked ~ .book2 {
   transform: translateY(-20vh);
-  transition: transform 0.5s ease;
+    transition:All .8s ease-out;
+-webkit-transition:All .8s ease-out;
+-moz-transition:All .8s ease-out;
+-o-transition:All .8s ease-out;
 }
 #dos:checked ~ .book,
 #dos:checked ~ .bg1, 
 #dos:checked ~ .book2 {
   transform: translateY(-120vh);
-  transition: transform 0.5s ease;
+  transition:All .8s ease-out;
+-webkit-transition:All .8s ease-out;
+-moz-transition:All .8s ease-out;
+-o-transition:All .8s ease-out;
 }
 
 #tres:checked ~ .book,
 #tres:checked ~ .bg1, 
 #tres:checked ~ .book2 {
   transform: translateY(-250vh);
-  transition: transform 0.5s ease;
+    transition:All .8s ease-out;
+-webkit-transition:All .8s ease-out;
+-moz-transition:All .8s ease-out;
+-o-transition:All .8s ease-out;
 }
 
 #cuatro:checked ~ .book,
@@ -100,7 +112,8 @@ input:checked + .label {
 #cuatro:checked ~ .book2,
 #cuatro:checked ~ .port {
   transform: translateY(-400vh);
-  transition: transform 0.5s ease;
+  
+
 }
 .bg0 {
   width: 100vw;
@@ -222,19 +235,16 @@ input:checked + .label {
 }
 
 .pink div{
-  background: linear-gradient(45deg, #ffe6f0 0%, #ffc5e0 34%, #ffa6b9 71%, #ff8a95 100%);
+  background: linear-gradient(45deg, #688e8e 0%, #688e8e 34%, #7ac1ea 71%, #7ac1ea 100%);
 }
 .pink i {
-  color: #ff8a95;
+  color: #688e8e;
 }
 .pink span {
-  background: #ff8a95;
+  background: #688e8e;
 
 }
-.ia-container input:checked + .pink {
-  /*outline: 60vh outset rgba(255, 211, 242, 0.5);*/
 
-}
 .mail  {
     position: relative !important;
     cursor: auto !important;
@@ -251,7 +261,7 @@ a {
 progress {
     background-color: #f3f3f3;
     border: white 2px solid;
-    height: 2rem;
+    height: 4vh;
     width: 100%;
     font-size: 0.8rem;
 }
@@ -278,17 +288,17 @@ cursor: pointer;
 
 .icons a {
   color:#fff;
-  background: #8e3f53;
+  background: #7ac1ea;
   border-radius:50%;
   text-align:center;
   text-decoration:none;
   font-family:fontawesome;
   position: relative;
   display: inline-block;
-  width:40px;
-  height:40px;
-  padding:12px;
-  margin:10px;
+  width: 4vh;
+  height: 4vh;
+  padding: 2vh;
+  margin: 2vh;
    -o-transition:all .5s;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
@@ -302,7 +312,7 @@ cursor: pointer;
 }
 
 .icons a span {
-  color:#DB6E82;
+  color:#7ac1ea;
   position:absolute;
   font-family:sans-serif;
   bottom:0;
@@ -310,7 +320,7 @@ cursor: pointer;
   right:-25px;
   padding:5px 7px;
   z-index:-1;
-  font-size:14px;
+  font-size:3vh;
   border-radius:2px;
   background:#fff;
   visibility:hidden;
@@ -340,6 +350,10 @@ cursor: pointer;
   opacity:1;
 }
 
+.icons i {
+  font-size: 4vh;
+}
+
 .blue div {
   background: linear-gradient(230deg, #caeaf6 0%, #a0eaf1 46%, #6fb8eb 100%);
 }
@@ -349,9 +363,6 @@ cursor: pointer;
 
 .blue span {
   background: #6fb8eb;
-}
-.ia-container input:checked + .blue {
-  /*outline: 60vh outset rgba(216, 211, 255, 0.5);*/
 }
 
 .ia-container {
@@ -422,7 +433,7 @@ cursor: pointer;
     
 }
 .ia-container figcaption {
-  width: 100%;
+  width: 90vw;
   height: 100%;
   position: absolute;
   transition: all 0.2s linear;
@@ -431,7 +442,7 @@ cursor: pointer;
 
   position: relative;
   z-index: -11;
-  padding: 4rem;
+  padding: 6vh;
   transition: all 0.7s ease-in-out;
 
   
@@ -457,7 +468,7 @@ cursor: pointer;
 .ia-container input:checked + figcaption {
   
   transition: all 1s ease-in-out 0.9s;
-  background-color: white;
+
   border-radius: 1%
 
 }
@@ -495,14 +506,14 @@ transition: opacity 2s;
 
 h1 {
 
-  font-family: 'Montserrat', sans-serif;
-  line-height: .9;
+font-family: 'Amatic SC', cursive;  line-height: .9;
   margin: 0;
+  font-size: 2.5rem;
 }
 
 .profile {
-  width: 150px !important;
-  height: 150px !important;
+  width: 20vh !important;
+  height: 20vh !important;
   max-width: 100% !important;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -726,55 +737,56 @@ position: relative;
 }
 
 @media screen and (max-width: 768px){
-   h4 {
-  display: none
+   .circle h2, .circle h3, .circle h4 {
+  display: none;
  }
 
 
 .circle {
-  left: 7vw;
+  top: 5vh;
   width: 10vw;
   height: 10vw;
+  margin: 0 5vw;
+  left: 0;
 }  
 #uno, #dos, #tres, #cuatro{
   display: inline-block;
-  margin-right: 7vw;
+  margin: 0;
+
 }
 .label {
-  top: 6vh;
-  left: 0;
-  margin-bottom: 0;
+  top: 5vh;
+
   font-size: 5vw;
+  margin: 5vw;
+
 
 }
 
 #uno:checked ~ .circle {
 
-  transform: translateY(0);
+  transform: translateX(10vw);
 }
 #dos:checked ~ .circle {
 
-  transform: translateX(19vw);
+  transform: translateX(32vw);
 }
 #tres:checked ~ .circle {
 
-  transform: translateX(38vw);
+  transform: translateX(53vw);
 }
-/*#cuatro:checked ~ .circle {
 
-  transform: translateX(56vw);
-}*/
 #dos:checked ~ .book,
 #dos:checked ~ .bg1, 
 #dos:checked ~ .book2 {
-  transform: translateY(-105vh);
+  transform: translateY(-110vh);
   transition: transform 0.5s ease;
 }
 
 #tres:checked ~ .book,
 #tres:checked ~ .bg1, 
 #tres:checked ~ .book2 {
-  transform: translateY(-205vh);
+  transform: translateY(-210vh);
   transition: transform 0.5s ease;
   }
 
@@ -826,7 +838,7 @@ position: relative;
 
 .ia-container { 
     width: 90vw;
-    height: 90vh;
+    height: 92vh;
     margin: auto;
     overflow: auto;
     padding: 0;
@@ -837,17 +849,17 @@ position: relative;
     height: 90vh;
     top: 8vh; 
     width: 100vw; 
-    left: 0;
+    margin:0;
  }
   
 .ia-container input { 
     height: 10vh;
     top: 0;
-    width: 100%
+    width: 90vw;
   }
   
 .ia-container input:checked ~ figure { 
-    top: 90vh;
+    top: 60vh;
   }
  
 
@@ -862,9 +874,10 @@ position: relative;
     width: 100vw;
   }
   .pane {
-    width: 90vw;
-    height: 100%;
-
+    padding: 8vh 5vw;
+    width: 80vw;
+    font-size: .7rem;
+    color:gray;
   }
   .ia-container input:checked ~ figure {
     left: 0;
@@ -887,17 +900,31 @@ position: relative;
 
 }
 
+.blue div {
+  background: linear-gradient(230deg, #ebf4f7 0%, #f8f8f8 46%, #fefefe 100%);
+      border: 1vw solid #6fb8eb;
+    max-width: 88vw;
+
+}
+.pink div {
+  background: linear-gradient(45deg, #db6e82 0%, #e7e7e7 34%, #d6d6d6 71%, #fefefe 100%);
+    border: 1vw solid #688e8e;
+    width: 88vw;
+
+}
+
+
 .book2 {
   margin:0;
 }
 .items {
-  white-space: normal;
+
   margin: 10%;
 }
 
 ._page {
-  width: 30vw;
-  height: 30vw;
+  width: 50vw;
+  height: 50vw;
 
 }
 #t {
@@ -908,11 +935,13 @@ position: relative;
 @media screen and (min-width: 769px){
 
  .mainly {
-  font-size: 4rem;
+  font-size: 5rem;
   position: absolute;
-  bottom: 1%;
-  right: 1%;
+  bottom: 5%;
+  right: -7%;
   z-index: 11;
+  font-family: 'Amatic SC', cursive;
+  transform: rotate(-8deg);
  }
 
  #uno:checked ~ .circle h2:after,
@@ -920,6 +949,7 @@ position: relative;
   content: "home";
   letter-spacing: 1.2em;
   color: pink;
+
  }
  #uno:checked ~ .circle h3:after {
   content: "desliza para revisar"
@@ -928,7 +958,7 @@ position: relative;
    #dos:checked ~ .mainly:after {
   content: "more";
   letter-spacing: 1.2em;
-  color: #9acde7;
+  color: #688e8e;
  }
  #dos:checked ~ .circle h3:after {
   content: "información sobre mí"
@@ -993,20 +1023,20 @@ input:checked + .label {
   progress::-moz-progress-bar {
 
       animation: textclip 3s linear infinite;
-      background: url('../img/overlay.png')pink;
+      background: url('../img/overlay.png')#7ac1ea;
   }
 
   .ia-container {
   height: 120vh;
   width: 80vw;
-  margin-left:24vw;
+  margin-left:20vw;
 
   }
  .ia-container figure {
     height: 65vh;
     top: 0;
     left: 5vw; /*  */
-    width: 60vw;
+    width: 59vw;
     margin: 1rem 0 1rem;
   }
 .ia-container .im {
@@ -1028,7 +1058,7 @@ input:checked + .label {
   -moz-box-shadow: -16px 24px 8px -6px rgba(89,72,77,0.41);
   box-shadow: -16px 24px 8px -6px rgba(89,72,77,0.41);
   height: 65vh;
-  width: 60vw;
+  width: 55vw;
   transition: all 0.8s ease-in-out 0.9s;
   border-left: 10vw solid white
 }
