@@ -16,25 +16,30 @@ body {
 
 
 .label {
-  color: pink;
+  color: #c7eaf6;
   z-index: 100;
   position: relative;
   cursor: pointer;
-  left: 5vw;
+  width: 10vh;
   font-size: 4vh;
+  text-align: center;
+  margin:3vh 0;
+
 }
 
+.label i {
+  margin: 3vh;
+}
 
 .circle {
-  position: absolute;
-  left: 4.4vw;
-  top: 5vh;
-  width: 9vh;
-  height: 9vh;
+
+  width: 10vh;
+  height: 10vh;
   border-radius: 50%;
   transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97), background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
   transform: translate3d(1rem, 0, 0);
-  z-index: 99
+  z-index: 99;
+  position: absolute;
 }
 
 
@@ -49,6 +54,7 @@ display:ruby-base;
 
 input:checked + .label {
   color: white;
+  z-index: 100;
 }
 
 #uno, #dos, #tres, #cuatro {
@@ -56,22 +62,23 @@ input:checked + .label {
   z-index: 100;
   display: flex;
   visibility: hidden;
-  margin:3.5vh;
+
 }
 
-#uno:checked ~ .circle {
+#uno:checked ~ .div .circle {
   background-color: pink;
   transform: translateY(3vh);
+
 }
-#dos:checked ~ .circle {
+#dos:checked ~ .div .circle {
   background-color: #688e8e;
-  transform: translateY(16.5vh);
+  transform: translateY(19vh);
 }
 
 
-#tres:checked ~ .circle {
+#tres:checked ~ .div .circle {
   background-color: #ff726b;
-  transform: translateY(32vh);
+  transform: translateY(35vh);
 }
 
 #cuatro:checked ~ .circle {
@@ -81,7 +88,7 @@ input:checked + .label {
 #uno:checked ~ .book,
 #uno:checked ~ .bg1, 
 #uno:checked ~ .book2 {
-  transform: translateY(-20vh);
+  transform: translateY(0vh);
     transition:All .8s ease-out;
 -webkit-transition:All .8s ease-out;
 -moz-transition:All .8s ease-out;
@@ -90,7 +97,7 @@ input:checked + .label {
 #dos:checked ~ .book,
 #dos:checked ~ .bg1, 
 #dos:checked ~ .book2 {
-  transform: translateY(-120vh);
+  transform: translateY(-100vh);
   transition:All .8s ease-out;
 -webkit-transition:All .8s ease-out;
 -moz-transition:All .8s ease-out;
@@ -100,7 +107,7 @@ input:checked + .label {
 #tres:checked ~ .book,
 #tres:checked ~ .bg1, 
 #tres:checked ~ .book2 {
-  transform: translateY(-250vh);
+  transform: translateY(-200vh);
     transition:All .8s ease-out;
 -webkit-transition:All .8s ease-out;
 -moz-transition:All .8s ease-out;
@@ -125,7 +132,7 @@ input:checked + .label {
   background-position: left bottom;
   position: absolute;
   background-repeat: no-repeat;
-  margin-top: -50vh;
+  margin-top: -10vh;
  
 
 }
@@ -138,7 +145,7 @@ input:checked + .label {
  .label:hover ~ .circle, .label:hover, .bg0:hover{
       filter: none;
       -webkit-filter: grayscale(0);
-      
+   
 
     }
 
@@ -743,10 +750,10 @@ position: relative;
 
 
 .circle {
-  top: 5vh;
-  width: 10vw;
-  height: 10vw;
-  margin: 0 5vw;
+  top: 8vw;
+  width: 12vw;
+  height: 12vw;
+
   left: 0;
 }  
 #uno, #dos, #tres, #cuatro{
@@ -754,45 +761,46 @@ position: relative;
   margin: 0;
 
 }
+.label i {
+
+  font-size: 6vw;
+  margin:5vw;
+
+}
 .label {
-  top: 5vh;
-
-  font-size: 5vw;
-  margin: 5vw;
-
-
+  margin:0;
 }
 
-#uno:checked ~ .circle {
+#uno:checked ~ .div .circle {
 
-  transform: translateX(10vw);
+  transform: translateX(3vw);
 }
-#dos:checked ~ .circle {
+#dos:checked ~ .div .circle {
 
-  transform: translateX(32vw);
+  transform: translateX(20vw);
 }
-#tres:checked ~ .circle {
+#tres:checked ~ .div .circle {
 
-  transform: translateX(53vw);
+  transform: translateX(40vw);
 }
 
 #dos:checked ~ .book,
 #dos:checked ~ .bg1, 
 #dos:checked ~ .book2 {
-  transform: translateY(-110vh);
+  transform: translateY(-105vh);
   transition: transform 0.5s ease;
 }
 
 #tres:checked ~ .book,
 #tres:checked ~ .bg1, 
 #tres:checked ~ .book2 {
-  transform: translateY(-210vh);
+  transform: translateY(-205vh);
   transition: transform 0.5s ease;
   }
 
 .bg0 {
   height: 110vh;
-  margin-top: -10vh;
+  margin-top: -20vh;
   background-size: contain;
 }
 
@@ -801,7 +809,6 @@ position: relative;
   width: 100%;
   text-align: center;
   align-items: center;
-  margin-top: 10vh;
 }
 
 .book  {
@@ -917,10 +924,7 @@ position: relative;
 .book2 {
   margin:0;
 }
-.items {
 
-  margin: 10%;
-}
 
 ._page {
   width: 50vw;
@@ -933,6 +937,15 @@ position: relative;
 }
 
 @media screen and (min-width: 769px){
+  .div {
+  display: flex;
+  flex-direction: column;
+      width: 20vh;
+    height: 40vh;
+    position: absolute;
+    align-items: center;
+
+}
 
  .mainly {
   font-size: 5rem;
@@ -944,32 +957,54 @@ position: relative;
   transform: rotate(-8deg);
  }
 
- #uno:checked ~ .circle h2:after,
+   .label:hover {
+    
+    border-radius: 50%;
+
+    opacity: .5;
+
+  }
+  .label:nth-child(1):hover {
+    background-color: pink;
+
+    
+  }
+   .label:nth-child(2):hover {
+    background-color: #688e8e;
+    
+  }
+ .label:nth-child(3):hover {
+    background-color: #ff726b;
+    
+  }
+
+ #uno:checked ~ .div .circle h2:after,
+
 #uno:checked ~ .mainly:after {
   content: "home";
   letter-spacing: 1.2em;
   color: pink;
 
  }
- #uno:checked ~ .circle h3:after {
+ #uno:checked ~ .div .circle h3:after {
   content: "desliza para revisar"
  }
-  #dos:checked ~ .circle h2:after,
+  #dos:checked ~ .div .circle h2:after,
    #dos:checked ~ .mainly:after {
   content: "more";
   letter-spacing: 1.2em;
   color: #688e8e;
  }
- #dos:checked ~ .circle h3:after {
+ #dos:checked ~ .div .circle h3:after {
   content: "información sobre mí"
  }
-  #tres:checked ~ .circle h2:after,
+  #tres:checked ~ .div .circle h2:after,
    #tres:checked ~ .mainly:after {
   content: "port";
   letter-spacing: 1.2em;
   color: #ff726b;
  }
- #tres:checked ~ .circle h3:after {
+ #tres:checked ~ .div .circle h3:after {
   content: "distintos trabajos";
   
  }
@@ -979,8 +1014,7 @@ input:checked + .label {
 }
 
 .book{
-
-  height: 80vh;
+  height: 100vh;
   margin-left: 30vw;
 
 }
@@ -1002,7 +1036,7 @@ input:checked + .label {
 }
 
 .bg1 {
-  height: 120vh;
+  height: 100vh;
   }
 
 .profile:hover {
@@ -1104,6 +1138,7 @@ input:checked + .label {
   overflow-x: scroll;
   overflow-y: hidden;
   scrollbar-width:none;
+  height: 100vh;
 }
 
 
